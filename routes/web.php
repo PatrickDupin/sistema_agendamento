@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('template');
+    return view('templates/index');
 });
+Route::get('/clientes', 'ClientesController@index')->name('listarClientes');
