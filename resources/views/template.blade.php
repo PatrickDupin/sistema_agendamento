@@ -20,6 +20,9 @@
       el: '#app',
       data: {
         message: 'Josias\' Barber!'
+      },
+      methods: {
+        adicionarCliente: function () {}
       }
     })
 </script>
