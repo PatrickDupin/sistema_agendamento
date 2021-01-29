@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PrincipalController;
+use App\Http\Controllers\ClientesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('templates/index');
-});
-Route::get('/clientes', 'ClientesController@index')->name('listarClientes');
+Route::get('/', [PrincipalController::class, 'index']);
+Route::get('/principal', [PrincipalController::class, 'index']);
+Route::get('/clientes', [ClientesController::class, 'index']);
+Route::get('/clientes/{id}', 'ClientesController@index')->name('alterarCliente');
+Route::get('/relatorios', 'ClientesController@cadastrar');
