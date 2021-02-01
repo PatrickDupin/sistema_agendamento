@@ -11,25 +11,25 @@
 <body>
   <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">Navbar
-          <!-- <img src="public/images/icon-barbearia-sm.jpeg" /> -->
+        <a class="navbar-brand" href="#">
+          <img src="{{ asset('images/icon-barbearia-sm.jpeg') }}" />
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div id="menu-bar" class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="/principal">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="/principal"> <i class="fas fa-home">&nbsp;</i> Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/clientes">Clientes</a>
+              <a class="nav-link" href="/clientes"> <i class="fas fa-user">&nbsp;</i> Clientes</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/agendamentos"> <i class="fas fa-calendar-alt">&nbsp;</i> Agendamentos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/relatorios"> <i class="fas fa-clipboard-list"></i> Relatórios</a>
+              <a class="nav-link" href="/relatorios"> <i class="fas fa-clipboard-list">&nbsp;</i> Relatórios</a>
             </li>
           </ul>
         </div>
@@ -37,7 +37,7 @@
   </nav>
 
   <main class="container">
-    <div class="mb-5"></div>
+    <div class="py-5"></div>
     @yield('conteudo')
   </main>
   <footer>

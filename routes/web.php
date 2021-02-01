@@ -15,8 +15,11 @@ use App\Http\Controllers\ClientesController;
 |
 */
 
-Route::get('/', [PrincipalController::class, 'index']);
-Route::get('/principal', [PrincipalController::class, 'index']);
+//Route::get('/', [PrincipalController::class, 'index']);
+Route::get('/', function () {
+    return redirect()->route('principal');
+});
+Route::get('/principal', [PrincipalController::class, 'index'])->name('principal');
 Route::get('/clientes', [ClientesController::class, 'index']);
 Route::get('/clientes/{id}', 'ClientesController@index')->name('alterarCliente');
 Route::get('/relatorios', 'ClientesController@cadastrar');
