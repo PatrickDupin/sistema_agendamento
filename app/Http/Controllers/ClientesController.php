@@ -9,8 +9,8 @@ class ClientesController extends Controller {
         return view('clientes.index');
     }
 
-    public function cadastrar (Request $request) {
-        var_dump($request);
+    public function cadastrar () {
+        return view('clientes.cadastro');
     }
 }
 

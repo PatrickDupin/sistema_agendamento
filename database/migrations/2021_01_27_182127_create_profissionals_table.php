@@ -13,7 +13,7 @@ class CreateProfissionalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('profissionals', function (Blueprint $table) {
+        Schema::create('profissionais_tbl', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
             $table->string('descricao');
@@ -30,6 +30,6 @@ class CreateProfissionalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profissionals');
+        Schema::dropIfExists('profissionais_tbl');
     }
 }

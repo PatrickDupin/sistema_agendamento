@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Barbearia do Josias</title>
+    <title>{{ config('app.name', 'Projeto Laravel') }}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/a9fb44c92d.js" crossorigin="anonymous"></script>
 </head>
@@ -20,16 +20,16 @@
         <div id="menu-bar" class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="/principal"> <i class="fas fa-home">&nbsp;</i> Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{{ route('principal') }}"> <i class="fas fa-home">&nbsp;</i> Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/clientes"> <i class="fas fa-user">&nbsp;</i> Clientes</a>
+              <a class="nav-link" href="{{ route('clientes') }}"> <i class="fas fa-user">&nbsp;</i> Clientes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/agendamentos"> <i class="fas fa-calendar-alt">&nbsp;</i> Agendamentos</a>
+              <a class="nav-link" href="{{ route('agendamentos') }}"> <i class="fas fa-calendar-alt">&nbsp;</i> Agendamentos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/relatorios"> <i class="fas fa-clipboard-list">&nbsp;</i> Relatórios</a>
+              <a class="nav-link" href="{{ route('relatorios') }}"> <i class="fas fa-clipboard-list">&nbsp;</i> Relatórios</a>
             </li>
           </ul>
         </div>

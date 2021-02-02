@@ -20,6 +20,10 @@ Route::get('/', function () {
     return redirect()->route('principal');
 });
 Route::get('/principal', [PrincipalController::class, 'index'])->name('principal');
-Route::get('/clientes', [ClientesController::class, 'index']);
-Route::get('/clientes/{id}', 'ClientesController@index')->name('alterarCliente');
-Route::get('/relatorios', 'ClientesController@cadastrar');
+
+Route::get('/clientes', [ClientesController::class, 'index'])->name('clientes');
+Route::get('/clientes/cadastrar', [ClientesController::class, 'cadastrar'])->name('cadastrarCliente');
+
+Route::get('/agendamentos', [AgendamentosController::class, 'index'])->name('agendamentos');
+
+Route::get('/relatorios', [RelatoriosController::class, 'index'])->name('relatorios');

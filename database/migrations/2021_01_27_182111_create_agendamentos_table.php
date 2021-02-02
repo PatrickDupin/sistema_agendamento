@@ -13,7 +13,7 @@ class CreateAgendamentosTable extends Migration
      */
     public function up()
     {
-        Schema::create('agendamentos', function (Blueprint $table) {
+        Schema::create('agendamentos_tbl', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->foreign('cliente_id')->references('id')->on('clientes_tbl');
@@ -29,6 +29,6 @@ class CreateAgendamentosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('agendamentos');
+        Schema::dropIfExists('agendamentos_tbl');
     }
 }
