@@ -4,21 +4,22 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAgendamentosTable extends Migration
-{
+class CreateAgendamentosTable extends Migration {
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::create('agendamentos_tbl', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->foreign('cliente_id')->references('id')->on('clientes_tbl');
-            $table->foreign('servico_id')->references('id')->on('servicos_tbl');
-            $table->foreign('profissional_id')->references('id')->on('profissionais_tbl');
+    public function up() {
+        Schema::create('agendamentos', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('cliente_id');
+            $table->integer('servico_id');
+            $table->integer('profissional_id');
+
+            $table->foreign('cliente_id')->references('id')->on('clientes');
+            $table->foreign('servico_id')->references('id')->on('servicos');
+            $table->foreign('profissional_id')->references('id')->on('profissionais');
         });
     }
 
@@ -27,8 +28,7 @@ class CreateAgendamentosTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::dropIfExists('agendamentos_tbl');
+    public function down() {
+        Schema::dropIfExists('agendamentos');
     }
 }

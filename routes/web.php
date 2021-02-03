@@ -23,6 +23,7 @@ Route::get('/principal', [PrincipalController::class, 'index'])->name('principal
 
 Route::get('/clientes', [ClientesController::class, 'index'])->name('clientes');
 Route::get('/clientes/cadastrar', [ClientesController::class, 'cadastrar'])->name('cadastrarCliente');
+Route::post('/clientes/cadastrar', [ClientesController::class, 'gravar']);
 
 Route::get('/agendamentos', [AgendamentosController::class, 'index'])->name('agendamentos');
 
