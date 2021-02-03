@@ -3,28 +3,29 @@
 @section('conteudo')
 <h1>Cadastro</h1>
 <form action="" method="post">@csrf
-    <div class="row">
-        <div class="col col-8">
+    <div class="row pt-4">
+        <div class="col">
             <label for="nome">Nome</label>
-            <input type="text" class="form-group" id="nome" name="nome" />
-        </div>
-        <div class="col col-4">
-            <label for="dt_nascimento">Data de Nascimento</label>
-            <input type="text" class="form-group" id="dt_nascimento" name="dt_nascimento" />
+            <input type="text" class="form-control" id="nome" name="nome" />
         </div>
     </div>
-    <div class="row">
-        <div class="col col-6">
+    <div class="row pt-4">
+        <div class="col col-5">
             <label for="telefone">Telefone</label>
-            <input type="text" class="form-group" id="telefone" name="telefone" />
+            <input type="text" class="form-control" id="telefone" name="telefone" />
         </div>
-        <div class="col col-6">
+        <div class="col">
             <label for="email">e-mail</label>
-            <input type="text" class="form-group" id="email" name="email" />
+            <input type="text" class="form-control" id="email" name="email" />
         </div>
     </div>
 
-    <button class="btn btn-dark mt-3"> <i class="fas fa-save">&nbsp;</i> Salvar</button>
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-dark my-5"> <i class="fas fa-save">&nbsp;</i> Salvar</button>
+            <button class="btn btn-secondary my-5"> <i class="fas fa-eraser">&nbsp;</i> Limpar</button>
+        </div>    
+    </div>
 
 </form>
 @endsection('conteudo')
