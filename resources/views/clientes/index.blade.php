@@ -19,8 +19,7 @@
       <td>{{ $cliente->telefone }}</td>
       <td>{{ $cliente->email }}</td>
       <td>
-        <a href="{{ route('alterarCliente') }}" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
-        <a href="{{ route('excluirCliente') }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+        <a href="/clientes/apagar/{{ $cliente->id }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
       </td>
     </tr>
     @endforeach

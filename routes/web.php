@@ -15,7 +15,6 @@ use App\Http\Controllers\ClientesController;
 |
 */
 
-//Route::get('/', [PrincipalController::class, 'index']);
 Route::get('/', function () {
     return redirect()->route('principal');
 });
@@ -24,7 +23,7 @@ Route::get('/principal', [PrincipalController::class, 'index'])->name('principal
 Route::get('/clientes', [ClientesController::class, 'index'])->name('clientes');
 Route::get('/clientes/cadastrar', [ClientesController::class, 'cadastrar'])->name('cadastrarCliente');
 Route::post('/clientes/cadastrar', [ClientesController::class, 'gravar']);
-Route::post('/clientes/apagar/{id}', [ClientesController::class, 'excluir'])->name('excluirCliente');
+Route::get('/clientes/apagar/{id}', [ClientesController::class, 'apagar']);
 
 
 Route::get('/agendamentos', [AgendamentosController::class, 'index'])->name('agendamentos');

@@ -10,8 +10,8 @@ use Illuminate\Http\Request;
 class ClientesController extends Controller {
     public function index (Request $request) {
         $clientes = Cliente::query()
-        ->orderBy('nome')
-        ->get();
+                ->orderBy('nome')
+                ->get();
 
         return view('clientes.index', compact('clientes'));
     }
@@ -32,8 +32,8 @@ class ClientesController extends Controller {
         return redirect()->route('clientes');
     }
 
-    public function excluir (Request $request, RemoverCliente $removerCliente) {
-        $cliente = $removerCliente->excluir($request(id));
+    public function apagar (Request $request, RemoverCliente $removerCliente) {
+        $cliente = $removerCliente->excluir($request->id);
 
         return redirect()->route('clientes');
     }
