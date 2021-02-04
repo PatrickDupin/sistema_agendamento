@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\Cliente;
 use App\Services\AdicionarCliente;
 use App\Services\RemoverCliente;
-use Illuminate\Http\Request;
 
 class ClientesController extends Controller {
     public function index (Request $request) {
@@ -38,4 +38,3 @@ class ClientesController extends Controller {
         return redirect()->route('clientes');
     }
 }
-

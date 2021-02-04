@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\AgendamentosController;
+use App\Http\Controllers\RelatoriosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +28,6 @@ Route::post('/clientes/cadastrar', [ClientesController::class, 'gravar']);
 Route::get('/clientes/apagar/{id}', [ClientesController::class, 'apagar']);
 
 Route::get('/agendamentos', [AgendamentosController::class, 'index'])->name('agendamentos');
+Route::get('/agendamentos/agendar', [AgendamentosController::class, 'agendar'])->name('agendarCliente');
 
 Route::get('/relatorios', [RelatoriosController::class, 'index'])->name('relatorios');
