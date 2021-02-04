@@ -25,7 +25,6 @@ Route::get('/clientes/cadastrar', [ClientesController::class, 'cadastrar'])->nam
 Route::post('/clientes/cadastrar', [ClientesController::class, 'gravar']);
 Route::get('/clientes/apagar/{id}', [ClientesController::class, 'apagar']);
 
-
 Route::get('/agendamentos', [AgendamentosController::class, 'index'])->name('agendamentos');
 
 Route::get('/relatorios', [RelatoriosController::class, 'index'])->name('relatorios');
